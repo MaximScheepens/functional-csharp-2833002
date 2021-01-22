@@ -12,7 +12,6 @@ namespace ConsoleApp
 {
 	class Examples
 	{
-
 		// how C# represents functions
 		// Methods
 		// Delegates
@@ -23,7 +22,6 @@ namespace ConsoleApp
 		public void DoWork()
 		{
 			UseHigherOrderFunction();
-
 		}
 
 		public void UseHigherOrderFunction()
@@ -34,7 +32,6 @@ namespace ConsoleApp
 
 			var numbers = Enumerable.Range(1, 120);
 
-
 			var divisibleByFive = numbers.FilterWithWhereExpression(x => x % 5 == 0);
 			var divisibleBySeven = numbers.FilterWithWhereExpression(x => x % 7 == 0);
 
@@ -42,14 +39,9 @@ namespace ConsoleApp
 
 			var Added = numbers.TransformWithOperation(Extensions.AddTo(3));
 			var maxNumbers = numbers.TransformWithOperation(Extensions.GetMax(20));
-
 		}
-
-
-
-
-
 	}
+	
 	public static class Extensions
 	{
 		// use delegates as function arguments
@@ -68,8 +60,6 @@ namespace ConsoleApp
 
 				}
 			}
-
-
 		}
 
 		public static IEnumerable<T1> TransformWithOperation<T1>(this IEnumerable<T1> items, Func<T1, T1> transformer)
@@ -81,13 +71,10 @@ namespace ConsoleApp
 
 				yield return transformer(item);
 			} 
-
 		}
-		//  Function factory, return a function 
 
+		//  Function factory, return a function 
 		public static Func<int, int> AddTo(int n) => i => i + n;
 		public static Func<int, int> GetMax(int n) => i => Math.Max(i,n) ;
-
-
 	}
 }
