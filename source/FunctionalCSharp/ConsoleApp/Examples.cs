@@ -6,7 +6,6 @@ namespace ConsoleApp
 	{
 		public void DoWorkWithPipeine()
 		{
-
 			int value = 5;
 			int resultA = value.ToPowerFour().MakeNegative();
 			int resultB = value.ToPowerFour().MakeNegative().AddTo(10);
