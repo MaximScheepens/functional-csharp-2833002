@@ -56,9 +56,6 @@ namespace ConsoleApp
 				{
 					yield return item;
 				}
-				{
-
-				}
 			}
 		}
 
