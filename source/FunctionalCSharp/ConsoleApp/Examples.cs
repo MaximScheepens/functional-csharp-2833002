@@ -20,8 +20,8 @@ namespace ConsoleApp
 			int resultA = addTo(toFourthPower(makeNegative(5)), 3);
 
 			// compose a new function
-
 			var composed = makeNegative.Compose(toFourthPower);
+
 			// var composed2 = makeNegative.Compose(toPowerFour).Compose(addTo);
 			int resultB = composed(5);
 		}
